@@ -34,10 +34,21 @@ app.get('/db', async (req, res) => {
 					"rowCount": result.rowCount
 				}
 				res.send(out);
+			}).catch(err => {
+				// format the error as a json object
+				out = {
+					"error": err.toString(),
+					"info": err
+				}
+				res.send(out);
 			})
 	} catch (err) {
-		console.error(err);
-		res.send("Error " + err);
+		// format the error as a json object
+				out = {
+					"error": err.toString(),
+					"info": err
+				}
+				res.send(out);
 	}
 });
 
