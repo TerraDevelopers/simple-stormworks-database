@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({
 	extended: true
 }));
-// app.get /db/${query} to query postgres
+// app.get /db?auth=authkey&tag=something&query=SQL to query postgres
 app.get('/db', async (req, res) => {
 	try {
 		// Check that all the required parameters are there
