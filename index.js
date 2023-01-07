@@ -55,6 +55,21 @@ app.get('/db', async (req, res) => {
 	}
 });
 
+// Some safety/security checks
+process.on('unhandledRejection', (reason, p) => {
+	console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+	// application specific logging, throwing an error, or other logic here
+});
+process.on('uncaughtException', (err) => {
+	console.log('Uncaught Exception thrown');
+	console.log(err);
+	// application specific logging, throwing an error, or other logic here
+});
+if(config.authKey === "changeme" || config.authKey === "") {
+	console.log("Please change the auth key in config.js");
+	process.exit(1);
+};
+
 // start server
 app.listen(config.port, () => {
 	console.log(`Server running on port ${config.port}`);
