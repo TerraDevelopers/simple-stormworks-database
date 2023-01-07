@@ -30,6 +30,7 @@ app.get('/db', async (req, res) => {
 		(await client).query(req.query.query)
 			.then(result => {
 				out = {
+					"ident": req.query.ident || null,
 					"rows": result.rows,
 					"rowCount": result.rowCount
 				}
@@ -37,6 +38,7 @@ app.get('/db', async (req, res) => {
 			}).catch(err => {
 				// format the error as a json object
 				out = {
+					"ident": req.query.ident || null,
 					"error": err.toString(),
 					"info": err
 				}
@@ -45,6 +47,7 @@ app.get('/db', async (req, res) => {
 	} catch (err) {
 		// format the error as a json object
 				out = {
+					"ident": req.query.ident || null,
 					"error": err.toString(),
 					"info": err
 				}
