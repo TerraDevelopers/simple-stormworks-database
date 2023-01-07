@@ -1,0 +1,11 @@
+{
+	"port": 3006,
+	"authKey": "changeme",
+	"postgres": {
+		"host": "localhost",
+		"port": 5432,
+		"username": "postgres",
+		"password": "postgres",
+		"database": "database"
+	}
+}
