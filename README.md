@@ -33,7 +33,7 @@ The `?query` parameter just takes and runs standard SQL queries! Here's some exa
 
 ```
 
-#DO NOT DIRECTLY PIPE UNFILTERED USER DATA (such as chat messages) INTO THE QUERY!!!
+# DO NOT DIRECTLY PIPE UNFILTERED USER DATA (such as chat messages) INTO THE QUERY!!!
 You have been warned
 
 At this point you can begin using it with your stormworks addons!
