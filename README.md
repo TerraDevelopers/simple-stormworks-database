@@ -28,10 +28,8 @@ At this point, some people are probably gonna be looking for a tool to see/modif
 DBeaver will make it easier to set up your tables for use with this system
 > If enough people ask for it, I might make a video on how to use Dbeaver a little bit - Chris Chrome
 
-The `?query` parameter just takes and runs standard SQL queries! Here's some examples!
-```
-
-```
+The `?query` parameter just takes and runs standard SQL queries.
+If you need help with formulating SQL queries, check out [this](https://www.w3schools.com/sql/default.asp) site, or just google it.
 
 # DO NOT DIRECTLY PIPE UNFILTERED USER DATA (such as chat messages) INTO THE QUERY!!!
 You have been warned
